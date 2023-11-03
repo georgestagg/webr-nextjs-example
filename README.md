@@ -18,6 +18,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 TypeScript source code showing an example of loading webR and using it in a page can be found in the file `app/page.tsx`. Note that at the moment there are some extra steps required so that the webR loader works correctly in a server component,
 
- * WebR must be configured by explicitly giving the path to the package installation directory, so that the R wasm binaries can be found by the server. For a standard webR installation this can be done by setting the optional webR setting `baseUrl: './node_modules/@r-wasm/webr/dist/'`.
+ * WebR must be configured by explicitly giving the path to the package installation directory, so that the R wasm binaries can be found by the server. For a standard webR installation this can be done by setting the optional webR setting `baseUrl: './node_modules/webr/dist/'`.
 
  * Next.js must be told to consistently re-render the page, by setting `export const dynamic = 'force-dynamic'`. Without this, randomised results from webR will be cached, which is probably not what is intended when evaluating R code with webR.
