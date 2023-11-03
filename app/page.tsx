@@ -1,8 +1,7 @@
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 
-import { WebR } from '@r-wasm/webr'
-import { RDouble } from '@r-wasm/webr/robj-main';
+import { WebR, RDouble } from 'webr'
 
 // Ensure that evaluation results from webR are not cached
 export const dynamic = 'force-dynamic'
@@ -11,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 // Explicitly set the webR base URL to the webR npm package directory
 const webR = new WebR({
-  baseUrl: './node_modules/@r-wasm/webr/dist/',
+  baseUrl: './node_modules/webr/dist/',
 });
 
 async function getRandomNumbers() {
