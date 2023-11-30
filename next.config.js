@@ -3,7 +3,7 @@ const nextConfig = {
   output: 'standalone',
   experimental: {
     outputFileTracingIncludes: {
-      '/': ['./node_modules/**/webr/*'],
+      '/': ['./node_modules/webr/**'],
     },
   },
 }
